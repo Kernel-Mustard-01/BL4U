@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Balsamiq+Sans:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    font-family: "Heebo", sans-serif;
+}
+
+.header {
+    background: url("Steel.jpg");
+    padding-bottom: 20px;
+}
+
+.logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    max-width: 40%;
+    min-width: 400px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    border: solid darkgrey 2px; 
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    color:#ffffff;
+    font-family: 'Oswald', sans-serif;
+    flex: 1;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+    top: 20%;
+    
+
+}
+
+.nav-links li{
+    font-size: 1.5rem;
+    width: 30%;
+    clear: both;
+    display: inline-block;
+    white-space: nowrap;
+    
+}
+
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.nav-links li a:hover{
+    color: red;
+    font-size: 1.7rem;
+    transition: 1s;
+}
+
+.container { 
+    clear: both; 
+    width: 800px; 
+    height: 70px; 
+    margin-bottom: 10px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+
+}
+    
+.container ul { 
+    padding: 0 0 0 20px; 
+    margin: 0; 
+    list-style: none;
+}
+
+#content {
+    position: relative;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: #fff;
+    font-family: 'Baloo 2', cursive;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        height: 100px;
+    }
+}
