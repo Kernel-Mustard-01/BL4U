@@ -1,6 +1,5 @@
 // SWITCHING CONTENT HTML
 
-// const { createDecipheriv } = require("crypto");
 
 async function fetchHtmlAsText(page) {
     return await (await fetch(page)).text();
@@ -14,16 +13,16 @@ async function loadContent(val) {
     contentDiv.innerHTML = await fetchHtmlAsText(page);
 }
 
-loadContent(outlets);
+loadContent(advertisers);
 
-listFromWeb();
+getAdvertisers();
 
 
 // OUTLETS
 
 
-async function listFromWeb() {
-    const outlets = 'https://www.digitalfields.co.za/Gateway/RSD/ws1.cfc?method=getOutslist&HPUBLISHERID=2';
+async function getOutlets() {
+    const outlets = 'https://www.digitalfields.co.za/Gateway/RSD/ws1.cfc?method=getOutlets&HPUBLISHERID=2';
     fetch(outlets)
     .then(response => response.json())
     .then(data => {
@@ -35,6 +34,24 @@ async function listFromWeb() {
     })
     .catch(err => console.log(err));
 };
+
+// Advertisers
+
+async function getAdvertisers() {
+    const advertisers = 'https://www.digitalfields.co.za/Gateway/RSD/ws1.cfc?method=getAdvertisers&HPUBLISHERID=2';
+    fetch(advertisers)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        // orderData(data);
+        for (let i = 0; i < data.length; i++){
+            createDiv(data[i]);
+        }
+    })
+    .catch(err => console.log(err));
+};
+
+// Creating Cards
 
 const createDiv = function(newCard){
     const detail = Object.values(newCard);
