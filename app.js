@@ -43,7 +43,6 @@ async function getAdvertisers() {
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        // orderData(data);
         for (let i = 0; i < data.length; i++){
             createDiv(data[i]);
         }
@@ -54,26 +53,25 @@ async function getAdvertisers() {
 // Creating Cards
 
 const createDiv = function(newCard){
-    const detail = Object.values(newCard);
-    console.log(detail);
-    const id = "card_" + detail[2];
+    const id = "card_" + newCard.HbusinessID;
     console.log(id)
     const cardRow = document.querySelector('.row');
     cardRow.innerHTML += `
             <div class="card">
                 <div class="card-header">
-                    <h3>This is a test</h3>
+                    <h3>${newCard.mainName}</h3>
+                    <span>${newCard.regionName}</span>
                 </div>
                 <div class="card-body ${id}">
-                </div>
+                <span>${newCard.address1}</span>
+                <span>${newCard.address2}</span>
+                <span>${newCard.address3}</span>
+                <span>${newCard.address4}</span>
+                <br>
+                <br>
+                <span>Contact: ${newCard.contactPerson}</span>
+                <br>
+                <span>On: ${newCard.contactNumber}</span>
             </div>
             `;
-    
-    for (let i = 0; i < detail.length; i++){
-        const cardID = document.querySelector(`.${id}`);
-            cardID.innerHTML += `
-            <br>
-            <span>${detail[i]}</span>
-            `;
-    } 
 };

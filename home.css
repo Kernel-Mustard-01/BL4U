@@ -1,0 +1,54 @@
+/* Animations 1 */
+
+#magazine {
+    width: 100px;
+    height: 100px;
+    perspective: 300px;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+  }
+  
+  #animation {
+    animation: anim 2s linear 0s infinite alternate;
+    transform-origin: 50% 100%;
+  }
+  
+  @keyframes anim {
+    from {transform: rotateX(90deg);}
+    to {transform: rotateX(-90deg);}
+  }
+
+/* Animations 2 */
+
+  
+.Fold { 
+    position: absolute; 
+    left: 50%; 
+    top: 55%; 
+    transform: translate(-50%, -50%); 
+    width: 400px; 
+    height: 200px; 
+    background-color: #4EE73C; 
+} 
+  
+h3 { 
+    margin: 20px; 
+    padding: 20px; 
+} 
+  
+.Fold:after { 
+    position: absolute; 
+    content: ''; 
+    right: 0; 
+    top: 0; 
+} 
+  
+.Fold:hover:after { 
+    transition-duration: 1s; 
+    border-bottom: 50px solid black; 
+    border-right: 50px solid white; 
+} 
