@@ -24,9 +24,6 @@
 
 /* Animations 2 */
 
-  h1 { 
-    color: green; 
-} 
   
 .Fold { 
     position: absolute; 
@@ -63,7 +60,7 @@ h3 {
     width: 100%;
     height: auto;
     margin-bottom: 0;
-    bottom: 0%;
+    bottom: 0px;
     background: #111;
     color:rgb(194, 190, 190);;
     text-align: center;

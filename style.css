@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
 
+/* Getting rid of the default margins and padding of the page */
 * {
     margin: 0;
     padding: 0;
@@ -12,11 +13,13 @@ main {
     font-family: "Heebo", sans-serif;
 }
 
+/* Steel Background Above Nav Bar */
 .header {
     background: url("Steel.jpg");
     padding-bottom: 20px;
 }
 
+/* Biker Lifestyle Logo On Steel Background */
 .logo img {
     display: block;
     margin-left: auto;
@@ -28,6 +31,7 @@ main {
     padding-top: 20px;
 }
 
+/* Nav Bar */
 nav {
     position: relative;
     display: flex;
@@ -39,20 +43,19 @@ nav {
     border: solid darkgrey 2px; 
 }
 
+/* All the links On Nav Bar */
 .nav-links{
     display: flex;
     list-style: none;
     color:#ffffff;
     font-family: 'Oswald', sans-serif;
-    flex: 1;
     padding-left: 10%;
     padding-right: 10%;
     position: relative;
     top: 20%;
-    
-
 }
 
+/* Listed Nav Links */
 .nav-links li{
     font-size: 1.5rem;
     width: 30%;
@@ -62,6 +65,7 @@ nav {
     
 }
 
+/* Each Individual Link With Anchor Tag */
 .nav-links li a{
     color: white;
     text-decoration: none;
@@ -69,12 +73,14 @@ nav {
     padding-right: 2px;
 }
 
+/* Hover Effect On Links In Nav Bar */
 .nav-links li a:hover{
     color: red;
     font-size: 1.7rem;
     transition: 1s;
 }
 
+/* The Div The Nav Is Stored Inside */
 .container { 
     clear: both; 
     width: 800px; 
@@ -85,13 +91,15 @@ nav {
     position: relative;
 
 }
-    
+
+/* Styling to the UL's in the Nav Bar */
 .container ul { 
     padding: 0 0 0 20px; 
     margin: 0; 
     list-style: none;
 }
 
+/* Styling of content in the div "content" in which the "content" is injected through the JavaScript calling a API and injecting it into the HTML */
 #content {
     position: relative;
     padding-top: 5%;
@@ -102,8 +110,54 @@ nav {
     font-family: 'Baloo 2', cursive;
 }
 
-@media (max-width: 1000px) {
-    nav {
-        height: 100px;
-    }
+/* Footer With Social Media Links */
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    bottom: 0px;
+    background: #111;
+    color:rgb(194, 190, 190);;
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.25rem;
 }
+
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link {
+    font-weight: bold;
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+}
+
+/*  End Of Footer  */
+
